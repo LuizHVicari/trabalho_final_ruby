@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  bought: false
+  due_date: 2023-11-25
+
+two:
+  user: two
+  bought: false
+  due_date: 2023-11-25
