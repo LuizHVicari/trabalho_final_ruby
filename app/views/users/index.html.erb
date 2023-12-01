@@ -6,9 +6,11 @@
   <% @users.each do |user| %>
     <%= render user %>
     <p>
-      <%= link_to "Show this user", user %>
+      <%= link_to "Show", user, :class => "btn btn-primary" %>
+      <%= button_to "Delete", user, method: :delete, :class => "btn btn-danger"%>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<hr>
+<%= link_to "New user", new_user_path, :class => "btn btn-success"%>

@@ -2,9 +2,12 @@
 
 <%= render @list %>
 
-<div>
-  <%= link_to "Edit this list", edit_list_path(@list) %> |
-  <%= link_to "Back to lists", lists_path %>
+<%= @list.products.map(&:name)%>
 
-  <%= button_to "Destroy this list", @list, method: :delete %>
+<div>
+  <%= link_to "Edit this list", edit_user_list_path%> |
+  <%= link_to "Back to lists", user_lists_path %>
+
+  <%= button_to "Destroy this list", [@list.user, @list], method: :delete %>
+
 </div>

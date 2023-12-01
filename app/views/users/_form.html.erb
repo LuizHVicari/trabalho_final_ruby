@@ -12,6 +12,17 @@
   <% end %>
 
   <div>
+    <%= form.label :name, "User's name" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :birth_date, "Birth date" %>
+    <%= form.date_field :birth_date %>
+  </div>
+
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

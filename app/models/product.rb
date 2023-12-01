@@ -3,5 +3,5 @@ class Product < ApplicationRecord
 
   validates_presence_of :name
 
-  validates_associated :price, greater_than: 0
+  # validates_associated :price, greater_than: 0
 end

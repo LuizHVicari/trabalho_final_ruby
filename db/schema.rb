@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_25_180024) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_01_193730) do
   create_table "lists", force: :cascade do |t|
     t.integer "user_id", null: false
     t.boolean "bought"
@@ -26,13 +26,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_180024) do
     t.integer "list_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "bought"
     t.index ["list_id"], name: "index_products_on_list_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.date "birth_date"
-    t.integer "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
