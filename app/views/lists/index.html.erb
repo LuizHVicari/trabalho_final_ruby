@@ -1,14 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Lists</h1>
+<p class="h1">Lists</p>
 
 <div id="lists">
   <% @lists.each do |list| %>
+  <hr>
     <%= render list %>
     <p>
-      <%= link_to "Show this list", [list.user, list] %>
+      <%= link_to "Show this list", [list.user, list], :class=>"btn btn-info" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New list", new_user_list_path %>
+<hr>
+<%= link_to "New list", new_user_list_path, :class=>"btn btn-success" %>

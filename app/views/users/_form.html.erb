@@ -11,18 +11,18 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, "User's name" %>
-    <%= form.text_field :name %>
+  <div class="input-group flex-nowrap">
+    <%= form.label :name, "User's name", :class=>"input-group-text"%>
+    <%= form.text_field :name, :class=>"form-control"%>
   </div>
 
-  <div>
-    <%= form.label :birth_date, "Birth date" %>
-    <%= form.date_field :birth_date %>
+  <div class="input-group flex-nowrap my-3">
+    <%= form.label :birth_date, "Birth date  ", :class=>"input-group-text" %>
+    <%= form.date_field :birth_date, :class=>"form-control" %>
   </div>
 
 
-  <div>
-    <%= form.submit %>
+  <div >
+    <%= form.submit :class=> "btn btn-success" %>
   </div>
 <% end %>

@@ -19,7 +19,7 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
-    10.times{@list.products.build}
+    1.times{@list.products.build}
   end
 
   # POST /lists or /lists.json
@@ -41,7 +41,7 @@ class ListsController < ApplicationController
   def update
     respond_to do |format|
       if @list.update(list_params)
-        format.html { redirect_to user_list_url(@list), notice: "List was successfully updated." }
+        format.html { redirect_to user_list_url(@user, @list), notice: "List was successfully updated." }
         format.json { render :show, status: :ok, location: @list }
       else
         format.html { render :edit, status: :unprocessable_entity }
