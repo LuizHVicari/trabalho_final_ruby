@@ -1,3 +1,14 @@
 <div id="<%= dom_id list %>">
 <p class="h3"><strong>Due date:</strong> <%= list.due_date%></p>
+<% if list.bought %>
+    <div id="container" style="background-color:#5cb85c; display:table; " class="mb-3 px-3 py-1 rounded" >
+        This list has been bought
+    </div>
+<%else%>
+<div style="background-color:#d9534f; display:table; " class="mb-3 px-3 py-1 rounded">
+        This list has not been bought yet
+    </div>
+
+
+<%end%>
 </div>

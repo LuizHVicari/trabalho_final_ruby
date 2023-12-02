@@ -72,6 +72,6 @@ class ListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def list_params
-      params.require(:list).permit(:due_date, :bought, products_attributes: [:name, :price, :bought])
+      params.require(:list).permit(:due_date, :bought, products_attributes: [:id, :name, :price, :bought])
     end
 end
