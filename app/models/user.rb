@@ -7,4 +7,10 @@ class User < ApplicationRecord
 
   validates_presence_of :birth_date
 
+  before_save :capitalize_name
+
+  def capitalize_name
+    self.name = self.name.capitalize
+  end
+
 end

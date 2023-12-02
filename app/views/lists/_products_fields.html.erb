@@ -1,12 +1,12 @@
-<p class="fields">
-    <%= f.label :name, "Name"%>
-    <%= f.text_field :name%>
+<p class="fields input-group flex-nowrap mt-3">
+    <%= f.label :name, "Name", :class=>"input-group-text"%>
+    <%= f.text_field :name, :class=>"form-control"%>
 
-    <%= f.label :price, "Price"%>
-    <%= f.number_field :price%>
+    <%= f.label :price, "Price", :class=>"input-group-text"%>
+    <%= f.number_field :price, :class=>"form-control"%>
 
-    <%= f.label :bought, "bought"%>
-    <%= f.check_box :bought%>
+    <%= f.label :bought, "bought", :class=>"pl-3 form-check-label"%>
+    <%= f.check_box :bought, :class=>"form-check-input" %>
 
 
 

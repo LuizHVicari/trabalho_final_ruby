@@ -2,20 +2,24 @@
 
 <%= render @list %>
 
+<hr>
+
 <%# <%= @list.products.map(&:name)%>
 
 <% @list.products.each do |product|%>
 
   <%if product.bought%>
   <div style="background-color: #5cb85c; display:table;" class="mb-3 px-3 py-1 rounded">
-    <%= product.name %> <%= product.price %> Bought
+    <strong>Product: </strong><%= product.name %><strong>$</strong> <%= product.price %> <strong>Bought</strong>
    </div>
     <%else%>
     <div style="background-color: #d9534f; display:table;" class="mb-3 px-3 py-1 rounded">
-      <%= product.name %> <%= product.price %> Not bought
+      <strong>Product: </strong><%= product.name %><strong>$</strong> <%= product.price %> <strong>Not bought</strong>
     </div>
   <%end%>
 <%end%>
+
+<hr>
 
 <div>
   <%= link_to "Edit this list", edit_user_list_path, :class=> "btn btn-primary me-2"%>
